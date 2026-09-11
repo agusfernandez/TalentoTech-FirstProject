@@ -1,16 +1,24 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### First Ejercise
+1. **Componente asistente.jsx:**
+- Creá un nuevo archivo /src/Asistente.jsx.
+- Este componente debe recibir tres props: nombre, tarea y emoji.
+- Adentro, tiene que mostrar esos datos. Por ejemplo, en un div que contenga un h3 para el nombre y un p para la tarea con su emoji. ¡Usá la desestructuración de props que vimos!
 
-Currently, two official plugins are available:
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+const Asistente = ({nombre, apellido, emoji}) => {
+  return (
+    <div>
+      <h2>Asistente</h2>
+      <p>El nombre completo es {nombre} ,{apellido}</p>
+      <p>Emoji: {emoji}</p>
+    </div>
+  );
+};
 
-## React Compiler
+export default Asistente;
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+   
+```
