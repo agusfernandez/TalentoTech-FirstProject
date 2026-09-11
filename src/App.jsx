@@ -5,6 +5,13 @@ import CuerpoPosteo from './components/CuerpoPosteo';
 import PieDePosteo from './components/PieDePosteo';
 import Asistente from './Asistente';
 
+
+const asistentes = [
+  { nombre: 'Juan Pérez', tarea: 'Frontend Developer', emoji: '👨‍💻' },
+  { nombre: 'Ana Gómez', tarea: 'Diseñadora UX/UI', emoji: '🎨' },
+  { nombre: 'Carlos Ruiz', tarea: 'Backend Developer', emoji: '👩‍💻' }
+];
+
 function App() {
 
 
@@ -14,8 +21,15 @@ function App() {
       <CuerpoPosteo />
       <PieDePosteo />
       <Bienvenida />
-      <Asistente nombre="Agustina" apellido="Gonzalez" emoji="😊" />
-     
+
+       {asistentes.map((asistente) => (
+        <Asistente
+          key={asistente.nombre}
+          nombre={asistente.nombre}
+          tarea={asistente.tarea}
+          emoji={asistente.emoji}
+        />
+      ))}
     </>
   )
 }
