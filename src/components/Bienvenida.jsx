@@ -1,5 +1,5 @@
 import Asistente from './Asistente';
-
+import Message from './Message';
 
 const Bienvenida = () => {
   const asistentes = [
@@ -10,7 +10,7 @@ const Bienvenida = () => {
 
   return (
     <div>
-      <h1>Bienvenido a nuestra aplicación</h1>
+      <Message>Esto es un Mensaje para Recordar</Message>
       <p>Estamos encantados de tenerte aquí. Explora nuestras funciones y disfruta de la experiencia.</p>
       <Asistente personas={asistentes} />
     </div>
