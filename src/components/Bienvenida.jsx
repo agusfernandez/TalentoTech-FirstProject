@@ -1,5 +1,6 @@
 import Asistente from './Asistente';
 import Message from './Message';
+import estilo from './Bienvenida.module.css';
 
 const Bienvenida = () => {
   const asistentes = [
@@ -11,7 +12,7 @@ const Bienvenida = () => {
   return (
     <div>
       <Message>Esto es un Mensaje para Recordar</Message>
-      <p>Estamos encantados de tenerte aquí. Explora nuestras funciones y disfruta de la experiencia.</p>
+      <p className={estilo.phrase}>Estamos encantados de tenerte aquí. Explora nuestras funciones y disfruta de la experiencia.</p>
       <Asistente personas={asistentes} />
     </div>
   );
